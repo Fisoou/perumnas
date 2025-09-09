@@ -4,11 +4,20 @@
   --black-text: #12161d;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url(Inter-VariableFont_opsz_wght.ttf);
+}
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,6 +28,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  border-radius: 8px;
 }
 
 ul {
@@ -35,10 +48,6 @@ ul {
   width: 100%;
   height: 1170px;
   position: absolute;
-}
-
-.container .img {
-  border-radius: 8px;
 }
 
 .header {
@@ -248,9 +257,8 @@ ul {
   width: auto !important;
 }
 
-.swiper .img {
+.swiper .slider-img {
   height: 320px;
-  object-fit: cove;
 }
 
 .features-con-2 {
@@ -375,23 +383,31 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   height: 24px;
-}
-
-.dash {
-  position: absolute;
-  right: 0;
-  bottom: 0px;
   width: 24px;
 }
 
-.dash-vert {
-  transform: rotate(-90deg);
+.dash {
+  content: "";
+  position: absolute;
+  background-color: #000;
   transition: all ease-in-out 0.2s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.dash-vert.active {
-  transition: all ease-in-out 0.2s;
-  transform: rotate(0);
+.dash-hor {
+  width: 100%;
+  height: 2px;
+}
+
+.dash-vert {
+  width: 2px;
+  height: 100%;
+}
+
+.question.active .dash-vert {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .questions-con .answer {
