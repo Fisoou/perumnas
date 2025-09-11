@@ -2,6 +2,11 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 40,
   loop: false,
   slidesPerView: "auto",
+  breakpoints: {
+    375: {
+      spaceBetween: 24,
+    },
+  },
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
